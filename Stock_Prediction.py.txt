@@ -1,0 +1,33 @@
+StockPrediction est un programme utilisé à des fins pédagogiques et personnels. Le but de ce programme est de "prédire" l'évolution du cours d'une valeur boursière en utilisant ses données fondamentales dans une premier temps.
+
+Chaque données fondamentales sera choisie minutieusement après de nombreuses recherches sur son importance dans l'évaluation de l'action. 
+
+Voici les grandes étapes du programmes :
+
+1 - Les données fondamentales sont récupérées via une API sur internet. 
+Ces données fondamentales regroupent : 
+(Détailler les données) 
+Ces données sont ensuites ordonnées dans un fichier csv 
+2 - Un deuxième fichier cvs sera ensuite créer pour avoir la valeur de l'action à l'instant t de l'action.
+3 - Un troisième fichier avec la valeur de l'indice boursier à l'instant t.
+ 
+Nous avons besoin des prix de l'indice S&P500 comme point de référence : une croissance de 5 % d'une action ne signifie pas grand-chose 
+si le S&P500 a progressé de 10 % au cours de la même période, de sorte que tous les rendements des actions doivent être comparés à ceux 
+de l'indice.
+
+4 - Elaboration de l'ensemble des données d'entrainement de notre machine learning 
+Notre objectif ultime pour les données d'entraînement est de disposer d'un "instantané" des fondamentaux d'une action particulière à 
+un moment donné, ainsi que de la performance annuelle correspondante de cette action.
+Par exemple, si notre "instantané" est constitué de toutes les données fondamentales de AAPL à la date du 28/1/2005, 
+nous devons également connaître le pourcentage de variation du prix de AAPL entre le 28/1/05 et le 28/1/06. 
+Ainsi, notre algorithme peut apprendre comment les fondamentaux influencent la variation annuelle du cours de l'action.
+En fait, il s'agit d'une légère simplification excessive. En fait, ce que l'algorithme va finalement apprendre, 
+c'est comment les fondamentaux influencent la surperformance d'une action par rapport à l'indice S&P500. 
+C'est pourquoi nous avons également besoin de données sur l'indice.
+
+5 - Backtesting 
+
+Pour évaluer notre programme, un test est nécessaire. Les données d'entrainements seront séparés en 2. Une partie d'entrainement et l'autre de test 
+Nous pourrons alors évaluer la pertinence du programme. 
+
+6 - Test sur les données actuelles des valeurs boursières. 
